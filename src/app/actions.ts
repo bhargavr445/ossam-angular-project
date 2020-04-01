@@ -1,3 +1,7 @@
 
 
 export const LOGIN_FORM = 'LOGIN_FORM';
+export const PRODUCT_DATA = 'PRODUCT_DATA';
+export const PERM_DATA = 'PERM_DATA';
+export const STUDENT_FILTER_DATA = 'STUDENT_FILTER_DATA';
+export const STUDENT_RESULT_DATA='STUDENT_RESULT_DATA';

@@ -1,0 +1,28 @@
+<p>student-filter works!</p>
+
+<form FormControlName="createForm">
+    <label>First Name</label>
+    <input type="text"
+           name="firstName" 
+           id="firstName" 
+           formControlName="firstName"/>
+
+           <div *ngIf="!createForm.controls['firstName'].valid &&
+                        createForm.controls['firstName'].errors.required">
+                        
+            <p>firstName Required</p>
+           </div>
+
+    <label>Last Name</label>
+    <input type="lastName" 
+            name="lastName" 
+            id="lastName" 
+            formControlName="lastName"/>
+
+            <div *ngIf="!createForm.controls['lastName'].valid &&
+            createForm.controls['lastName'].errors.required">
+<p>Last Name Required</p>
+</div>
+
+    <button type="submit" (click)="submitLogin()">Submit</button>
+</form>

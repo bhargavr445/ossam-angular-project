@@ -1,1 +1,19 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" (submit)="loginUser()">
+    <label>User Name*</label>
+    <input  type="text" 
+            id="email" 
+            name="email" 
+            onchange=""
+            formControlName="email">
+    
+   
+    <label>Password*</label>
+    <input  type="password" 
+            id="password" 
+            name="password" 
+            formControlName="password">
+    <button type="submit">Log In</button>
+  </form>
+
+
+  <button (click)="logoutUser()">Logout</button>
