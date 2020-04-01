@@ -7,25 +7,26 @@ import { NgRedux } from '@angular-redux/store';
   styleUrls: ['./home-product.component.scss']
 })
 export class HomeProductComponent implements OnInit, OnDestroy {
- 
+
 
   myRes: any;
-  constructor(private ngRedux: NgRedux<AppState>
-  ) { }
-
-  ngOnInit() {
-
-    this.ngRedux.select(state =>{
-      return state.home.resultList
-    }).subscribe(data =>{
-      console.log(data);
-      this.myRes = data;
-    })
+  constructor(private ngRedux: NgRedux<AppState>) { 
     
   }
 
+  ngOnInit() {
+
+    this.ngRedux.select(state => {
+      return state.home.resultList
+    }).subscribe(data => {
+      console.log(data);
+      this.myRes = data;
+    })
+
+  }
+
   ngOnDestroy() {
-   console.log('Prod Destroyed')
+    console.log('Prod Destroyed')
   }
 
 }
