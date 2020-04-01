@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService, private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit() { 
+
+    this.userService.getProducts();
+
+    var info = {"city": "Fairfax"};
+
+    info.city = undefined;
+
+    console.log(info);
   }
+
+  goToProducts() {
+
+    this.router.navigate(['home/products']);
+
+
+  }
+
+ 
 
 }

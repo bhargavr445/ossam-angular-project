@@ -1,1 +1,18 @@
-<p>home works!</p>
+<input type="text" >
+<table>
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr *ngFor="let hero of heroes">
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+    </tr>
+  </table>
+
+  <!-- <app-home-product></app-home-product> -->
+
+  <button type="submit" (click)="goToProducts()">Go To Prod</button>
+  <router-outlet></router-outlet>

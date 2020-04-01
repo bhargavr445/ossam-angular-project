@@ -6,10 +6,13 @@ const routes: Routes = [
   {path:'', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component:LoginComponent},
   {path: 'home', loadChildren:'./home/home.module#HomeModule'},
+  {path:'student',loadChildren:'./student/student.module#StudentModule'},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  
+}
