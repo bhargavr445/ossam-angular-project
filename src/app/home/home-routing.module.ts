@@ -5,10 +5,12 @@ import { HomeProductComponent } from './home-product/home-product.component';
 
 
 const routes: Routes = [
-  {path:'', component: HomeComponent, 
- children:[
-   {path: 'products', component: HomeProductComponent}
- ]}
+  {
+    path: '', component: HomeComponent,
+    children: [
+      { path: 'products', component: HomeProductComponent }
+    ]
+  }
 ];
 
 @NgModule({
